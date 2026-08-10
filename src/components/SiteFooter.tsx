@@ -6,21 +6,23 @@ interface FooterLink {
   href: string;
 }
 
+const REFERRAL_URL = "https://lucidtrading.com/ref/emo230890";
+
 const exploreLinks: FooterLink[] = [
-  { label: "Home", href: "#" },
-  { label: "About Us", href: "#" },
-  { label: "Contact Us", href: "#" },
-  { label: "FAQ", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: REFERRAL_URL },
+  { label: "Contact Us", href: REFERRAL_URL },
+  { label: "FAQ", href: REFERRAL_URL },
 ];
 
 const resourceLinks: FooterLink[] = [
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Use", href: "#" },
-  { label: "Refund & Liability Policy", href: "#" },
-  { label: "Risk Disclosure Statement", href: "#" },
+  { label: "Privacy Policy", href: REFERRAL_URL },
+  { label: "Terms of Use", href: REFERRAL_URL },
+  { label: "Refund & Liability Policy", href: REFERRAL_URL },
+  { label: "Risk Disclosure Statement", href: REFERRAL_URL },
 ];
 
-const partnerLinks: FooterLink[] = [{ label: "Affiliate", href: "#" }];
+const partnerLinks: FooterLink[] = [{ label: "Affiliate", href: REFERRAL_URL }];
 
 const socialLinks = [
   { label: "X (Twitter)", href: "#", Icon: XTwitterIcon },
@@ -43,6 +45,8 @@ function FooterLinkList({ links }: { links: FooterLink[] }) {
         <li key={link.label}>
           <a
             href={link.href}
+            target={link.href === "/" ? undefined : "_blank"}
+            rel={link.href === "/" ? undefined : "noopener noreferrer"}
             className="text-xl text-[#b9c8e7] transition-colors hover:text-white"
           >
             {link.label}

@@ -8,12 +8,14 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+const REFERRAL_URL = "https://lucidtrading.com/ref/emo230890";
+
 const NAV_LINKS = [
   { label: "Home", href: "/", active: true },
-  { label: "About Us", href: "#", active: false },
-  { label: "FAQ", href: "#", active: false },
-  { label: "Merch", href: "#", active: false },
-  { label: "Affiliates", href: "#", active: false },
+  { label: "About Us", href: REFERRAL_URL, active: false },
+  { label: "FAQ", href: REFERRAL_URL, active: false },
+  { label: "Merch", href: REFERRAL_URL, active: false },
+  { label: "Affiliates", href: REFERRAL_URL, active: false },
 ] as const;
 
 export function SiteHeader() {
@@ -51,6 +53,8 @@ export function SiteHeader() {
             <Link
               key={link.label}
               href={link.href}
+              target={link.href === "/" ? undefined : "_blank"}
+              rel={link.href === "/" ? undefined : "noopener noreferrer"}
               className={cn(
                 "font-sans text-[18px] font-medium text-white transition-opacity hover:opacity-80",
                 link.active && "border-b border-white pb-1"
@@ -108,6 +112,8 @@ export function SiteHeader() {
               <Link
                 key={link.label}
                 href={link.href}
+                target={link.href === "/" ? undefined : "_blank"}
+                rel={link.href === "/" ? undefined : "noopener noreferrer"}
                 onClick={() => setMobileOpen(false)}
                 className={cn(
                   "rounded-md px-2 py-3 font-sans text-[18px] font-medium text-white transition-opacity hover:opacity-80",
