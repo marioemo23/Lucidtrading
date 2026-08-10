@@ -13,6 +13,7 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("http://localhost:3000"),
   title: "Lucid Trading - The Best Prop Firm For Futures | Fast Payouts!",
   description:
     "Join the top-rated prop firm for futures. Instant Funding. Same-Day Payouts. No Recurring Fees.",

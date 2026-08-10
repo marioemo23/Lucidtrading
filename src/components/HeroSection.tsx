@@ -54,6 +54,7 @@ export function HeroSection() {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Button
               render={<Link href="#" />}
+              nativeButton={false}
               variant="default"
               className="h-auto rounded-[5px] px-5 py-[15px] font-heading text-base font-bold"
             >
@@ -61,6 +62,7 @@ export function HeroSection() {
             </Button>
             <Button
               render={<Link href="#" />}
+              nativeButton={false}
               variant="secondary"
               className="h-auto rounded-[5px] px-5 py-[15px] font-heading text-base font-bold"
             >

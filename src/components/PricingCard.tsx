@@ -116,7 +116,7 @@ function DllModal({ toggle, onClose }: { toggle: "ON" | "OFF"; onClose: () => vo
         <h3 className="font-heading text-2xl font-bold text-[#e6e6e6]">DLL:</h3>
 
         <div className="mt-6 flex justify-center">
-          <TogglePill options={["OFF", "ON"]} active={toggle === "ON" ? 1 : 0} size="lg" />
+          <TogglePill options={["ON", "OFF"]} active={toggle === "ON" ? 0 : 1} size="lg" />
         </div>
 
         <p className="mt-6 text-[15px] leading-relaxed text-[#a6abb0]">
@@ -247,8 +247,8 @@ function DllToggleRow({
     <div className="flex items-center justify-between gap-3 py-[9px]">
       <span className="text-[15px] font-medium text-[#a6abb0]">Daily Loss Limit</span>
       <TogglePill
-        options={["OFF", "ON"]}
-        active={value === "ON" ? 1 : 0}
+        options={["ON", "OFF"]}
+        active={value === "ON" ? 0 : 1}
         onClick={onOpen}
       />
     </div>

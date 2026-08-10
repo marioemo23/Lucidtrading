@@ -64,12 +64,14 @@ export function SiteHeader() {
         <div className="hidden items-center gap-4 lg:flex">
           <Button
             render={<a href="#" />}
+            nativeButton={false}
             className="rounded-[5px] bg-brand-slate px-[30px] py-3 font-heading text-base font-bold text-white transition-[filter] duration-200 hover:brightness-110"
           >
             Get Started
           </Button>
           <Button
             render={<a href="#" />}
+            nativeButton={false}
             className="rounded-full bg-[#6d8ccd] px-6 py-2.5 font-heading text-base font-bold text-white transition-[filter] duration-200 hover:brightness-110"
           >
             My Portal
@@ -106,12 +108,14 @@ export function SiteHeader() {
             <div className="mt-2 flex flex-col gap-3 px-2">
               <Button
                 render={<a href="#" />}
+            nativeButton={false}
                 className="w-full rounded-[5px] bg-brand-slate px-[30px] py-3 font-heading text-base font-bold text-white"
               >
                 Get Started
               </Button>
               <Button
                 render={<a href="#" />}
+            nativeButton={false}
                 className="w-full rounded-full bg-[#6d8ccd] px-6 py-2.5 font-heading text-base font-bold text-white"
               >
                 My Portal
