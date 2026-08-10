@@ -140,19 +140,23 @@ function CardButtons({ showFundedRules }: { showFundedRules: boolean }) {
   return (
     <div className="flex flex-col gap-2 pt-4">
       {showFundedRules && (
-        <button
-          type="button"
-          className="w-full rounded-lg border border-white/[0.08] bg-white/[0.04] px-4 py-[7.7px] text-base font-semibold text-[#c6c8cb] transition-colors hover:bg-white/[0.08]"
+        <a
+          href="https://lucidtrading.com/ref/emo230890"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full rounded-lg border border-white/[0.08] bg-white/[0.04] px-4 py-[7.7px] text-center text-base font-semibold text-[#c6c8cb] transition-colors hover:bg-white/[0.08]"
         >
           Funded Rules
-        </button>
+        </a>
       )}
-      <button
-        type="button"
-        className="w-full rounded-[10px] border border-[#34373a] bg-[#161616] px-4 py-[8.8px] text-base font-bold text-[#30d68a] transition-colors hover:bg-[#1c1c1c]"
+      <a
+        href="https://lucidtrading.com/ref/emo230890"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block w-full rounded-[10px] border border-[#34373a] bg-[#161616] px-4 py-[8.8px] text-center text-base font-bold text-[#30d68a] transition-colors hover:bg-[#1c1c1c]"
       >
         Sign Up
-      </button>
+      </a>
     </div>
   );
 }

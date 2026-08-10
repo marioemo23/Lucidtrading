@@ -53,7 +53,13 @@ export function HeroSection() {
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Button
-              render={<Link href="#" />}
+              render={
+                <Link
+                  href="https://lucidtrading.com/ref/emo230890"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              }
               nativeButton={false}
               variant="default"
               className="h-auto rounded-[5px] px-5 py-[15px] font-heading text-base font-bold"
@@ -61,7 +67,13 @@ export function HeroSection() {
               Start Trading
             </Button>
             <Button
-              render={<Link href="#" />}
+              render={
+                <Link
+                  href="https://lucidtrading.com/ref/emo230890"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              }
               nativeButton={false}
               variant="secondary"
               className="h-auto rounded-[5px] px-5 py-[15px] font-heading text-base font-bold"

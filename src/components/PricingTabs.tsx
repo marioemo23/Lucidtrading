@@ -467,12 +467,14 @@ export function PricingTabs() {
 
         {activeId === "daily" && (
           <div className="mt-8 flex justify-center">
-            <button
-              type="button"
+            <a
+              href="https://lucidtrading.com/ref/emo230890"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full border border-white/20 px-5 py-2 text-xs font-bold tracking-wide text-white/80 uppercase transition-colors hover:bg-white/5"
             >
               Customize Your Plan
-            </button>
+            </a>
           </div>
         )}
 

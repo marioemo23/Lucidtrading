@@ -34,7 +34,9 @@ export function CtaDiscordSection() {
           </div>
 
           <a
-            href="#"
+            href="https://lucidtrading.com/ref/emo230890"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-6 block w-full rounded-lg bg-brand-mint py-3 text-center font-bold text-[#0d0d0d] transition-opacity hover:opacity-90"
           >
             Join Our Discord
