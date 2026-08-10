@@ -47,3 +47,7 @@ next-env.d.ts
 
 # Local temp files
 temp/
+
+# Agent worktrees / harness state
+.claude/worktrees/
+.claude/scheduled_tasks.lock
