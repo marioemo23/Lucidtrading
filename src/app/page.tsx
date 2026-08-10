@@ -1,9 +1,28 @@
+import { SiteHeader } from "@/components/SiteHeader";
+import { HeroSection } from "@/components/HeroSection";
+import { PartnersMarquee } from "@/components/PartnersMarquee";
+import { StepsSection } from "@/components/StepsSection";
+import { TrustFaqSection } from "@/components/TrustFaqSection";
+import { CtaDiscordSection } from "@/components/CtaDiscordSection";
+import { SiteFooter } from "@/components/SiteFooter";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <p className="text-muted-foreground">
-        Clone target not yet built. Run <code className="font-mono text-foreground">/clone-website</code> to start.
-      </p>
-    </main>
+    <>
+      <SiteHeader />
+      <main>
+        <HeroSection />
+        <div className="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
+          <PartnersMarquee />
+        </div>
+        <div className="mx-auto max-w-[1200px] px-6 pb-16 lg:px-10">
+          <StepsSection />
+        </div>
+        {/* PricingTabs mounts here once its builder agent completes */}
+        <TrustFaqSection />
+        <CtaDiscordSection />
+      </main>
+      <SiteFooter />
+    </>
   );
 }
