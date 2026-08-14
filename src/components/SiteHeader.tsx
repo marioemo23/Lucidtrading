@@ -7,15 +7,14 @@ import { Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-
-const REFERRAL_URL = "https://lucidtrading.com/ref/emo230890";
+import { AFFILIATE_GATEWAY } from "@/lib/affiliate";
 
 const NAV_LINKS = [
   { label: "Home", href: "/", active: true },
-  { label: "About Us", href: REFERRAL_URL, active: false },
-  { label: "FAQ", href: REFERRAL_URL, active: false },
-  { label: "Merch", href: REFERRAL_URL, active: false },
-  { label: "Affiliates", href: REFERRAL_URL, active: false },
+  { label: "About Us", href: AFFILIATE_GATEWAY, active: false },
+  { label: "FAQ", href: AFFILIATE_GATEWAY, active: false },
+  { label: "Merch", href: AFFILIATE_GATEWAY, active: false },
+  { label: "Affiliates", href: AFFILIATE_GATEWAY, active: false },
 ] as const;
 
 export function SiteHeader() {
@@ -54,7 +53,7 @@ export function SiteHeader() {
               key={link.label}
               href={link.href}
               target={link.href === "/" ? undefined : "_blank"}
-              rel={link.href === "/" ? undefined : "noopener noreferrer"}
+              rel={link.href === "/" ? undefined : "sponsored noopener noreferrer"}
               className={cn(
                 "font-sans text-[18px] font-medium text-white transition-opacity hover:opacity-80",
                 link.active && "border-b border-white pb-1"
@@ -69,9 +68,9 @@ export function SiteHeader() {
           <Button
             render={
               <a
-                href="https://lucidtrading.com/ref/emo230890"
+                href={AFFILIATE_GATEWAY}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="sponsored noopener noreferrer"
               />
             }
             nativeButton={false}
@@ -82,9 +81,9 @@ export function SiteHeader() {
           <Button
             render={
               <a
-                href="https://lucidtrading.com/ref/emo230890"
+                href={AFFILIATE_GATEWAY}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="sponsored noopener noreferrer"
               />
             }
             nativeButton={false}
@@ -113,7 +112,7 @@ export function SiteHeader() {
                 key={link.label}
                 href={link.href}
                 target={link.href === "/" ? undefined : "_blank"}
-                rel={link.href === "/" ? undefined : "noopener noreferrer"}
+                rel={link.href === "/" ? undefined : "sponsored noopener noreferrer"}
                 onClick={() => setMobileOpen(false)}
                 className={cn(
                   "rounded-md px-2 py-3 font-sans text-[18px] font-medium text-white transition-opacity hover:opacity-80",
@@ -127,9 +126,9 @@ export function SiteHeader() {
               <Button
                 render={
               <a
-                href="https://lucidtrading.com/ref/emo230890"
+                href={AFFILIATE_GATEWAY}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="sponsored noopener noreferrer"
               />
             }
             nativeButton={false}
@@ -140,9 +139,9 @@ export function SiteHeader() {
               <Button
                 render={
               <a
-                href="https://lucidtrading.com/ref/emo230890"
+                href={AFFILIATE_GATEWAY}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="sponsored noopener noreferrer"
               />
             }
             nativeButton={false}

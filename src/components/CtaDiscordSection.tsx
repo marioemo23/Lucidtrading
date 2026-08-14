@@ -1,5 +1,7 @@
 import Image from "next/image"
 
+import { AFFILIATE_GATEWAY } from "@/lib/affiliate"
+
 export function CtaDiscordSection() {
   return (
     <section className="w-full py-20 px-4">
@@ -34,9 +36,9 @@ export function CtaDiscordSection() {
           </div>
 
           <a
-            href="https://lucidtrading.com/ref/emo230890"
+            href={AFFILIATE_GATEWAY}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="sponsored noopener noreferrer"
             className="mt-6 block w-full rounded-lg bg-brand-mint py-3 text-center font-bold text-[#0d0d0d] transition-opacity hover:opacity-90"
           >
             Join Our Discord

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Check, X } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { AFFILIATE_GATEWAY } from "@/lib/affiliate";
 import type { DailyCard, DirectCard, ProFlexCard } from "@/types/lucid";
 
 export type PricingCardProps =
@@ -141,18 +142,18 @@ function CardButtons({ showFundedRules }: { showFundedRules: boolean }) {
     <div className="flex flex-col gap-2 pt-4">
       {showFundedRules && (
         <a
-          href="https://lucidtrading.com/ref/emo230890"
+          href={AFFILIATE_GATEWAY}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="sponsored noopener noreferrer"
           className="block w-full rounded-lg border border-white/[0.08] bg-white/[0.04] px-4 py-[7.7px] text-center text-base font-semibold text-[#c6c8cb] transition-colors hover:bg-white/[0.08]"
         >
           Funded Rules
         </a>
       )}
       <a
-        href="https://lucidtrading.com/ref/emo230890"
+        href={AFFILIATE_GATEWAY}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="sponsored noopener noreferrer"
         className="block w-full rounded-[10px] border border-[#34373a] bg-[#161616] px-4 py-[8.8px] text-center text-base font-bold text-[#30d68a] transition-colors hover:bg-[#1c1c1c]"
       >
         Sign Up

@@ -1,28 +1,27 @@
 import { DiscordIcon, InstagramIcon, XTwitterIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
+import { AFFILIATE_GATEWAY } from "@/lib/affiliate";
 
 interface FooterLink {
   label: string;
   href: string;
 }
 
-const REFERRAL_URL = "https://lucidtrading.com/ref/emo230890";
-
 const exploreLinks: FooterLink[] = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: REFERRAL_URL },
-  { label: "Contact Us", href: REFERRAL_URL },
-  { label: "FAQ", href: REFERRAL_URL },
+  { label: "About Us", href: AFFILIATE_GATEWAY },
+  { label: "Contact Us", href: AFFILIATE_GATEWAY },
+  { label: "FAQ", href: AFFILIATE_GATEWAY },
 ];
 
 const resourceLinks: FooterLink[] = [
-  { label: "Privacy Policy", href: REFERRAL_URL },
-  { label: "Terms of Use", href: REFERRAL_URL },
-  { label: "Refund & Liability Policy", href: REFERRAL_URL },
-  { label: "Risk Disclosure Statement", href: REFERRAL_URL },
+  { label: "Privacy Policy", href: AFFILIATE_GATEWAY },
+  { label: "Terms of Use", href: AFFILIATE_GATEWAY },
+  { label: "Refund & Liability Policy", href: AFFILIATE_GATEWAY },
+  { label: "Risk Disclosure Statement", href: AFFILIATE_GATEWAY },
 ];
 
-const partnerLinks: FooterLink[] = [{ label: "Affiliate", href: REFERRAL_URL }];
+const partnerLinks: FooterLink[] = [{ label: "Affiliate", href: AFFILIATE_GATEWAY }];
 
 const socialLinks = [
   { label: "X (Twitter)", href: "#", Icon: XTwitterIcon },
@@ -46,7 +45,7 @@ function FooterLinkList({ links }: { links: FooterLink[] }) {
           <a
             href={link.href}
             target={link.href === "/" ? undefined : "_blank"}
-            rel={link.href === "/" ? undefined : "noopener noreferrer"}
+            rel={link.href === "/" ? undefined : "sponsored noopener noreferrer"}
             className="text-xl text-[#b9c8e7] transition-colors hover:text-white"
           >
             {link.label}

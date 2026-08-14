@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { DiscordIcon } from "@/components/icons"
 import { cn } from "@/lib/utils"
+import { AFFILIATE_GATEWAY } from "@/lib/affiliate"
 
 interface StatCard {
   value: string
@@ -55,9 +56,9 @@ export function HeroSection() {
             <Button
               render={
                 <Link
-                  href="https://lucidtrading.com/ref/emo230890"
+                  href={AFFILIATE_GATEWAY}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="sponsored noopener noreferrer"
                 />
               }
               nativeButton={false}
@@ -69,9 +70,9 @@ export function HeroSection() {
             <Button
               render={
                 <Link
-                  href="https://lucidtrading.com/ref/emo230890"
+                  href={AFFILIATE_GATEWAY}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="sponsored noopener noreferrer"
                 />
               }
               nativeButton={false}
